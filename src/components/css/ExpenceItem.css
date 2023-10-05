@@ -1,0 +1,11 @@
+.expence-item-main {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 20px;
+}
+.expenseItemTitle-price {
+  border: 1px solid black;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: rgb(187, 247, 147);
+}

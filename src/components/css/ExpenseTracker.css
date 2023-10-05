@@ -1,0 +1,12 @@
+.head {
+  background-color: rgb(184, 183, 183);
+  padding: 20px;
+}
+.main {
+  color: rgb(50, 3, 3);
+}
+.expenseItemHead {
+  font-size: 50px;
+  text-transform: uppercase;
+  text-shadow: 5px 5px 10px rgba(39, 38, 38, 0.5);
+}

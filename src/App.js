@@ -4,7 +4,7 @@ import ExpenseDate from "./components/ExpenseDate";
 import ExpenseItem from "./components/ExpenseItem";
 import ExpenseTrackHead from "./components/ExpenseTrackHead";
 import ExpenseTracker from "./components/ExpenseTracker";
-import SubmitButton from "./components/SubmitButton";
+import Submit from "./components/SubmitButton";
 
 function App() {
   const expenseData = [
@@ -33,7 +33,7 @@ function App() {
         <ExpenseTracker />
         <ExpenseTrackHead />
         <ExpenseComponent items={expenseData} />
-        <SubmitButton />
+        <Submit />
       </div>
     </>
   );

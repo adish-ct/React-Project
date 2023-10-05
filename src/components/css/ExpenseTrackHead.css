@@ -1,0 +1,14 @@
+.expense-table-head {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 15px;
+  background-color: black;
+  color: white;
+}
+/* .expense-table-head-date {
+}
+.expense-table-head-service {
+}
+.expense-table-head-amount {
+} */
