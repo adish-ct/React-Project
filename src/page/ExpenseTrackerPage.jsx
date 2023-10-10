@@ -33,10 +33,10 @@ function ExpenseTrackerPage() {
         <div>
             <Navbar />
             <div className="row w-100">
-                <div className="col-2 bg-dark text-white">
+                <div className="col-2 text-white">
                     <SideBar />
                 </div>
-                <div className="col-10">
+                <div className="col-10 col-lg-10">
                     <ExpenseTracker />
                     <ExpenseTrackHead />
                     <ExpenseComponent items={expenseData} />
