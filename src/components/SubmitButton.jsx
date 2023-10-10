@@ -1,58 +1,41 @@
-import React, { Component } from 'react'
+import React, { useState } from "react";
 
-class Submit extends Component {
 
-    constructor(props) {
-        super(props);
-        this.state = {
-            counter: 0,
-            enable: false,
-            content: "",
+function SubmitButton() {
+    const [count, setCount] = useState(0)
+    const [color, setColor] = useState(0)
+
+    const decreaseCount = () => {
+        if (count > 0) {
+            setCount(count - 1);
+            if ((count - 1) % 5 === 0) {
+                setColor(2)
+            } else {
+                setColor(-1)
+            }
         }
+
+    }
+    const addCount = () => {
+        setCount(count + 1);
+        if ((count + 1) % 5 === 0) {
+            setColor(2)
+        } else {
+            setColor(1)
+        }
+
     }
 
-    increment = () => {
-        this.setState((prev, props) => (
-            { counter: prev.counter + 1 }
-        ));
-    };
-
-    decrement = () => {
-        this.setState((prev, props) => (
-            { counter: prev.counter - 1 }
-        ));
-    }
-
-    checkboxClicked = () => {
-        this.setState((prev, props) => (
-            { enable: !prev.enable }
-        ))
-    };
-
-    changeHandler = (e) => {
-        this.setState({content: e.target.value})
-    }
-
-
-
-    render() {
-        return (
-            <div>
-                <button onClick={this.increment} >Increase</button>
-                <button onClick={this.decrement} >Decrease</button>
-                <p> {this.state.counter} </p>
-                <br />
-                <label>
-                    check box <p>{this.state.enable ? "Enabled" : "Disabled"}</p>
-                </label>
-                <input type="checkbox" onClick={this.checkboxClicked} />
-                <input type="text" onChange={ this.changeHandler } /><br />
-                <p> { this.state.content } </p>
+    return (
+        <div>
+            <hr />
+            <h1>Count : <span className={color === 1 ? "text-success" : color === 2 ? "text-info" : "text-danger"}>{count}</span> </h1>
+            <div className="d-flex gap-5 justify-content-center mt-5">
+                <button className="btn btn-lg btn-danger" onClick={decreaseCount} > Decrease </button>
+                <button className="btn btn-lg btn-success" onClick={addCount} > Increase </button>
             </div>
-        )
-    }
+        </div>
+    )
 }
 
-
-
-export default Submit
+export default SubmitButton
