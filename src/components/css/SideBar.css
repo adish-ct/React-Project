@@ -1,0 +1,13 @@
+.side-bar {
+  height: 100%;
+  background-color: rgb(233, 38, 38);
+}
+
+.active {
+  color: rgb(127, 72, 5);
+  border-bottom: 2px;
+}
+
+.nav-link {
+  text-decoration: none;
+}

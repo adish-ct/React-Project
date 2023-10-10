@@ -32,7 +32,7 @@ function ExpenseTrackerPage() {
     return (
         <div>
             <Navbar />
-            <div className="row">
+            <div className="row w-100">
                 <div className="col-2 bg-dark text-white">
                     <SideBar />
                 </div>
