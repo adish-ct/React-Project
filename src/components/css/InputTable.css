@@ -1,0 +1,24 @@
+.input-table {
+  border-collapse: collapse;
+  width: 100%;
+  border: 1px solid rgb(207, 202, 202);
+}
+.input-table td,
+.input-table th {
+  border: 1px solid #ccc;
+  padding: 5px;
+}
+.input-table input {
+  width: 100%;
+  border: none;
+  padding: 5px;
+}
+
+.input-table input:focus {
+  outline: none;
+  border-color: #000;
+}
+
+.input-table th {
+  background-color: #f2f2f2;
+}

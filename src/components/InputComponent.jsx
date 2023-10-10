@@ -14,6 +14,7 @@ function InputComponent(props) {
             <div className="m-5 text-center">
                 <h1>FORM</h1>
                 <InputForm />
+                
             </div>
         </div>
     )

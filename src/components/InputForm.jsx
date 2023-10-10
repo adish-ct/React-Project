@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react'
 import '../components/css/InputForm.css'
+import InputTable from './InputTable'
 
 function InputForm(props) {
     const [name, setName] = useState('')
@@ -13,9 +14,10 @@ function InputForm(props) {
     }, [name])
 
     const formSubmit = () => {
-        console.log(nameRef.current.value);
         setName(nameRef.current.value + '')
-        console.log(name);
+        nameRef.current.value = ''
+        setPhone(phoneRef.current.value + '')
+        phoneRef.current.value = ''
     }
 
     return (
@@ -27,6 +29,7 @@ function InputForm(props) {
                     <button type='sumbit' className='btn btn-large btn-secondary' onClick={formSubmit} > Submit </button>
                 </div>
             </form>
+            <InputTable name={name} phone={phone} />
         </div>
     )
 }

@@ -14,7 +14,6 @@ function CountPage() {
                 </div>
                 <div className="col-10">
                     <SubmitButton />
-                    <InputComponent />
                 </div>
             </div>
         </div>
