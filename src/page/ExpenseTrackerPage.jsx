@@ -5,6 +5,7 @@ import SubmitButton from '../components/SubmitButton'
 import ExpenseComponent from '../components/ExpenseComponent'
 import InputComponent from '../components/InputComponent'
 import Navbar from '../components/NavSideBars/Navbar'
+import SideBar from '../components/NavSideBars/SideBar'
 
 function ExpenseTrackerPage() {
     const expenseData = [
@@ -31,11 +32,16 @@ function ExpenseTrackerPage() {
     return (
         <div>
             <Navbar />
-            <ExpenseTracker />
-            <ExpenseTrackHead />
-            <ExpenseComponent items={expenseData} />
-            <SubmitButton />
-            <InputComponent />
+            <div className="row">
+                <div className="col-2 bg-dark text-white">
+                    <SideBar />
+                </div>
+                <div className="col-10">
+                    <ExpenseTracker />
+                    <ExpenseTrackHead />
+                    <ExpenseComponent items={expenseData} />
+                </div>
+            </div>
         </div>
     )
 }
