@@ -5,6 +5,7 @@ import HomePage from "./page/HomePage";
 import CountPage from "./page/CountPage";
 import InputFormPage from "./page/InputFormPage";
 import { useState } from "react";
+import Product from "./page/Product";
 
 
 function App() {
@@ -25,6 +26,7 @@ function App() {
           <Route path="/expense-track" element={<ExpenseTrackerPage />} />
           <Route path="/count-section" element={<CountPage />} />
           <Route path="/user-form" element={<InputFormPage />} />
+          <Route path="/products" element={<Product />} />
         </Routes>
       </Router>
     </div>
