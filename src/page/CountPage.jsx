@@ -19,5 +19,4 @@ function CountPage() {
         </div>
     )
 }
-
 export default CountPage

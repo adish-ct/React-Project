@@ -3,8 +3,10 @@ import '../components/css/InputForm.css'
 import InputTable from './InputTable'
 
 function InputForm(props) {
+
     const [name, setName] = useState('')
     const [phone, setPhone] = useState('')
+
 
     const nameRef = useRef(null)
     const phoneRef = useRef(null)
@@ -14,9 +16,22 @@ function InputForm(props) {
     }, [name])
 
     const formSubmit = () => {
-        setName(nameRef.current.value + '')
+        if (nameRef.current.value) {
+            if (phoneRef.current.value) {
+                setPhone(phoneRef.current.value + '')
+                setName(nameRef.current.value + '')
+            } else {
+                alert("phone required")
+                phoneRef.current.focus()
+                return false
+            }
+
+        } else {
+            alert("name required")
+            nameRef.current.focus()
+            return false
+        }
         nameRef.current.value = ''
-        setPhone(phoneRef.current.value + '')
         phoneRef.current.value = ''
     }
 

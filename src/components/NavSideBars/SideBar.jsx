@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function SideBar() {
     return (
@@ -6,7 +7,7 @@ function SideBar() {
             <div className="text-center">
                 <ul className='list-unstyled d-flex flex-column gap-5 align-items:center justify-content:center text-white'>
                     <li className='active'>Home</li>
-                    <li>Service</li>
+                    <Link className='nav-link' to="/user-form"><li>Form</li></Link>
                     <li>About</li>
                     <li>Logout</li>
                 </ul>
